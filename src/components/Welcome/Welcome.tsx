@@ -19,7 +19,7 @@ export function Welcome() {
       <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
         {user?.email}<br /><br />
         Hey Kenya check this out, eba250 webpage already optimized for mobile use, nightmode, email login and stuff. You can finde the source code on my{' '}
-        <Anchor href="https://mantine.dev/guides/vite/" size="lg">
+        <Anchor href="https://github.com/ironheade/eba250" size="lg">
           {' '} Github
         </Anchor>
         .<br /><br />
