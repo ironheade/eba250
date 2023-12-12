@@ -1,22 +1,30 @@
 import { Title, Text, Anchor } from '@mantine/core';
 import classes from './Welcome.module.css';
+import { auth } from '../../../src/firebase';
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export function Welcome() {
+
+  const [user, loading, error] = useAuthState(auth);
+
   return (
     <>
       <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
+        eba
+        {/*{' '}*/}
         <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+          250
         </Text>
       </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Vite project includes a minimal setup, if you want to learn more on Mantine +
-        Vite integration follow{' '}
+      <Text color="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
+        {user?.email}<br /><br />
+        Hey Kenya check this out, eba250 webpage already optimized for mobile use, nightmode, email login and stuff. You can finde the source code on my{' '}
         <Anchor href="https://mantine.dev/guides/vite/" size="lg">
-          this guide
+          {' '} Github
         </Anchor>
-        . To get started edit pages/Home.page.tsx file.
+        .<br /><br />
+        Anyway, eba250 is about batteries and stuff. "European Battery Alliance", but I actually don't know what the 250 stands for.
+        <br /><br />
       </Text>
     </>
   );

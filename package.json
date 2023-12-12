@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "deploy": "tsc && vite build && firebase deploy",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "npm run lint:eslint && npm run lint:stylelint",
@@ -20,9 +21,14 @@
   },
   "dependencies": {
     "@mantine/core": "7.3.1",
+    "@mantine/form": "^7.3.1",
     "@mantine/hooks": "7.3.1",
+    "@tabler/icons": "^2.44.0",
+    "@tabler/icons-react": "^2.44.0",
+    "firebase": "^10.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
     "react-router-dom": "^6.18.0"
   },
   "devDependencies": {
